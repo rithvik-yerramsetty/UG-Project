@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Substation</title>
+</head>
+<body>
+<h2>List of Substations</h2>
+<ul>
+    {% for substation in all_substations %}
+    <li><a href="{% url 'detail' substation.id %}">{{ substation.substation_name}}</a><br></li>
+    {% endfor %}
+</ul>
+</body>
+</html>
